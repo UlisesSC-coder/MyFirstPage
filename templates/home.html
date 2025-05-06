@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Home Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            h1 {
+                color: #ff0033;
+            }
+            h2 {
+                color: #ffff00;
+            }
+        </style>
+    </head>
+    <body>    
+        <h1>Welcome to the Home Page</h1>
+
+        {{ title }}
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for d in data %}
+                <tr>
+                    <td>{{ d.name }}</td>
+                    <td>{{ d.age }}</td>
+                </tr>
+            {% endfor %}
+            </body>
+        </table>
+        <div>
+            <h2>About Us</h2>
+            <p>This is a simple web application to demonstrate the use of Flask and Jinja2 templates.</p>
+        </div>        
+    </body>
+</html>
